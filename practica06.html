@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>práctica06</title>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1{
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    form{
+    box-shadow: 10px 20px 15px;
+    width: 300px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 20px;
+    
+}
+input{
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid lightgray;
+}
+    #b{
+        color: white;
+        background-color: blue;
+    }
+    label{
+        display: block;
+    }
+</style>
+</head>
+<body>
+    <h1>Inicio de Sesión</h1>
+    <form action="" id = "formulario">
+       <div>Nombre de Usuario:</div>
+        <input type="text" id="user" name="user">
+        <div>Contraseña:</div>
+        <input type="password" id="password" name="password">
+        <input type="submit" value="Iniciar Sesión" id="b">
+    </form>
+    <script>
+        const loginform = document.getElementById("formulario")
+        loginform.addEventListener("submit", evento => {
+            evento.preventDefault()
+            //console.log(evento)
+            let u = document.getElementById("user").value
+            let p = document.getElementById("password").value
+            //alert("Usuario:"+u+"Contraseña:"+p)
+            alert(`Usuario: ${u} y Contraseña ${p}`)
+        })
+    </script>
+</body>
+</html>
