@@ -1,4 +1,4 @@
-
+import './MiFieldSet.css'
 function MiFieldSet(props) {
     const {titulo, txt1, txt2} = props
     return (
