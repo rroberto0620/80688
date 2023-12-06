@@ -8,7 +8,7 @@ function Formulario(props) {
 
     const hacerPeticion = async () => {
         try {
-            const response = await axios.get('http://localhost:4567/tipo-usuario')
+            const response = await axios.get('http://localhost:4567/tipo-usuario',{params:datosFormulario})
             console.log("hacerPeticion", response)
             return response.data
         } catch (error) {
